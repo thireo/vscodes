@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "preLaunchTask": "",
+            "servertype": "jlink",
+            "cwd": "${workspaceRoot}",
+            "name": "Debug with J-Link",
+            "executable": "${workspaceRoot}/build/zephyr/zephyr.elf",
+            "device": "nRF9160",
+            "interface": "jtag",
+            "showDevDebugOutput": false,
+            "overrideLaunchCommands": [
+                // override to skip flashing firmware - which messes up mcuboot
+                //`interpreter-exec console "monitor halt"`,
+                //`interpreter-exec console "monitor reset"`,
+                //`enable-pretty-printing`
+            ],
+        }
+    ]
+}

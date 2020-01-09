@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "/home/thir/gits/ncs/nrf/samples/nrf9160/http_application_update"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"zephyr.h": "c"
+		}
+	}
+}
