@@ -6,7 +6,9 @@
 	],
 	"settings": {
 		"files.associations": {
-			"zephyr.h": "c"
+			"zephyr.h": "c",
+			"flash.h": "c",
+			"kernel.h": "c"
 		}
 	}
 }

@@ -5,6 +5,14 @@
             "label": "Build NRF9160",
             "type": "process",
             "command": "west",
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            },
             "options": {
                 "cwd": "${workspaceFolder}/",
                 "env": {
@@ -24,14 +32,21 @@
                 "-b",
                 "nrf9160_pca20035ns",
                 "-d",
-                "${workspaceFolder}/build_pca20035ns/",
-            ],
-            "problemMatcher": []
+                "${workspaceFolder}/build_pca20035ns/"
+            ]
         },
         {
             "label": "Build & Clean NRF9160",
             "type": "shell",
             "command": "west",
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            },
             "options": {
                 "cwd": "${workspaceFolder}/",
                 "env": {
@@ -53,8 +68,10 @@
                 "-d",
                 "${workspaceFolder}/build_pca20035ns/"
             ],
-            "problemMatcher": []
-        },
+            "problemMatcher": [
+                "$eslint-stylish"
+            ]
+        }
     ]
     
 }
