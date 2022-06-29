@@ -5,19 +5,11 @@
             "label": "Build NRF9160",
             "type": "process",
             "command": "west",
-            "presentation": {
-                "echo": true,
-                "reveal": "silent",
-                "focus": false,
-                "panel": "shared",
-                "showReuseMessage": false,
-                "clear": true
-            },
             "options": {
-                "cwd": "${workspaceFolder}/",
+                "cwd": "${workspaceFolder}",
                 "env": {
                     "ZEPHYR_TOOLCHAIN_VARIANT": "gnuarmemb",
-                    "GNUARMEMB_TOOLCHAIN_PATH": "~/gits/ncs/gcc-arm-none-eabi-9-2019-q4-major"
+                    "GNUARMEMB_TOOLCHAIN_PATH": "c:/gnuarmemb/"
                 }
             },
             "group": {
@@ -33,25 +25,18 @@
                 "nrf9160_pca20035ns",
                 "-d",
                 "${workspaceFolder}/build_pca20035ns/"
-            ]
+            ],
+            "problemMatcher": []
         },
         {
             "label": "Build & Clean NRF9160",
-            "type": "shell",
+            "type": "process",
             "command": "west",
-            "presentation": {
-                "echo": true,
-                "reveal": "silent",
-                "focus": false,
-                "panel": "shared",
-                "showReuseMessage": false,
-                "clear": true
-            },
             "options": {
-                "cwd": "${workspaceFolder}/",
+                "cwd": "${workspaceFolder}",
                 "env": {
                     "ZEPHYR_TOOLCHAIN_VARIANT": "gnuarmemb",
-                    "GNUARMEMB_TOOLCHAIN_PATH": "~/gits/ncs/gcc-arm-none-eabi-9-2019-q4-major"
+                    "GNUARMEMB_TOOLCHAIN_PATH": "c:/gnuarmemb/"
                 }
             },
             "group": {
@@ -68,9 +53,18 @@
                 "-d",
                 "${workspaceFolder}/build_pca20035ns/"
             ],
-            "problemMatcher": [
-                "$eslint-stylish"
-            ]
+            "problemMatcher": []
+        },
+        {
+            "label": "Flash NRF9160",
+            "type": "process",
+            "command": "west",
+            "args": [
+                "flash",
+                "--build-dir",
+                "${workspaceFolder}\\build_pca20035ns"
+            ],
+            "problemMatcher": []
         }
     ]
     

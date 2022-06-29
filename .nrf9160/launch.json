@@ -6,18 +6,20 @@
             "request": "launch",
             "preLaunchTask": "",
             "servertype": "jlink",
-            "cwd": "${workspaceRoot}",
+            "cwd": "${workspaceRoot}\\build_pca20035ns",
             "name": "Debug with J-Link",
-            "executable": "${workspaceRoot}/build/zephyr/zephyr.elf",
+            "executable": "${workspaceRoot}\\build_pca20035ns\\zephyr\\zephyr.elf",
             "device": "nRF9160",
-            "interface": "jtag",
+            "interface": "swd",
             "showDevDebugOutput": false,
             "overrideLaunchCommands": [
                 // override to skip flashing firmware - which messes up mcuboot
-                //`interpreter-exec console "monitor halt"`,
-                //`interpreter-exec console "monitor reset"`,
-                //`enable-pretty-printing`
+                `interpreter-exec console "monitor halt"`,
+                `interpreter-exec console "monitor reset"`,
+                `enable-pretty-printing`
             ],
-        }
+            "runToMain": true,
+
+        },
     ]
 }

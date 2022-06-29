@@ -1,14 +1,14 @@
 {
 	"folders": [
 		{
-			"path": "/home/thir/gits/ncs/nrf/samples/nrf9160/http_application_update"
+			"path": "C:/ncs/nrf/samples/nrf9160/http_application_update/"
 		}
 	],
 	"settings": {
 		"files.associations": {
 			"zephyr.h": "c",
-			"flash.h": "c",
-			"kernel.h": "c"
+			"functional": "c",
+			"at_cmd.h": "c"
 		}
 	}
 }
